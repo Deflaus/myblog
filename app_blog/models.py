@@ -32,6 +32,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('app_blog:post_detail', args=[self.date_published.year,
+            self.date_published.month,
+            self.date_published.day,
+            self.slug])
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')

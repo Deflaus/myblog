@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static "css/blog.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="content">
+        {% block content %}{% endblock %}
+        </div>
+        <div id="sidebar">
+        <h2>Блог разработки приложения "Блог"</h2>
+        <p>Блог разработки приложения, в котором находится весь процесс разработки приложения</p>
+        </div>
+    </body>
+</html>

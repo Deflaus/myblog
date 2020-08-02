@@ -7,7 +7,7 @@
 			<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
 		</h2>
 		<p class="date">
-			Published {{ post.date_published }} by {{ post.author }}
+			Опубликовано {{ post.date_published }} автором {{ post.author }}
 		</p>
 		{{ post.body|truncatewords:30|linebreaks }}
 	{% endfor %}

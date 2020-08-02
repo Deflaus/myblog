@@ -3,14 +3,18 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
-        <link href="{% static "css/blog.css" %}" rel="stylesheet">
+        <link href="{% static "css/app_blog.css" %}" rel="stylesheet">
     </head>
     <body>
         <div id="content">
         {% block content %}{% endblock %}
         </div>
         <div id="sidebar">
-        <h2>Блог разработки приложения "Блог"</h2>
+        <h2>
+            <a href="{% url "app_blog:post_list" %}">
+                Блог разработки приложения "Блог"
+            </a>
+        </h2>
         <p>Блог разработки приложения, в котором находится весь процесс разработки приложения</p>
         </div>
     </body>
